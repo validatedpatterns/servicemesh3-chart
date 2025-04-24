@@ -15,4 +15,30 @@
 
 {{ template "chart.valuesSection" . }}
 
+## Using Service Mesh 3 in ambient mode
+
+Below is a minimal example of values needed to run this chart
+in ambient mode. (Like with the regular deployment of this chart,
+it is assumed that you have the Red Hat OpenShift Service Mesh 3.0
+operator installed on your cluster.)
+
+```yaml
+servicemesh:
+  profile: ambient
+
+  istio:
+    values:
+      trustedZtunnelNamespace: istio-system
+
+  ztunnel:
+    enabled: true
+
+  monitoring:
+    podMonitorNamespaces:
+      - istio-system
+```
+
+You can opt-in an entire namespace or at a more granular deployment/pod/service/etc.
+level by giving the appropriate Kubernetes resource the label `istio.io/dataplane-mode: ambient`.
+
 {{ template "helm-docs.versionFooter" . }}
