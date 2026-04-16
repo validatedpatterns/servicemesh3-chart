@@ -4,7 +4,9 @@ kind: ZTunnel
 metadata:
   name: {{ .Values.servicemesh.ztunnel.name | quote }}
 spec:
+  {{- if .Values.servicemesh.version }}
   version: {{ .Values.servicemesh.version | quote }}
+  {{- end }}
   namespace: {{ .Values.servicemesh.ztunnel.namespace | default .Release.Namespace | quote }}
   {{- if .Values.servicemesh.profile }}
   profile: {{ .Values.servicemesh.profile | quote }}

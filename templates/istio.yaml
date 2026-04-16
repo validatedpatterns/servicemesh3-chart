@@ -3,7 +3,9 @@ kind: Istio
 metadata:
   name: {{ .Values.servicemesh.istio.name | quote }}
 spec:
+  {{- if .Values.servicemesh.version }}
   version: {{ .Values.servicemesh.version | quote }}
+  {{- end }}
   namespace: {{ .Values.servicemesh.istio.namespace | default .Release.Namespace | quote }}
   {{- if .Values.servicemesh.profile }}
   profile: {{ .Values.servicemesh.profile }}

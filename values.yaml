@@ -1,5 +1,5 @@
 servicemesh:
-  version: v1.24.3
+  version: null
   profile: "" # Always applies default and openshift profiles, even when not set. If set, must be one of: ambient, default, demo, empty, openshift-ambient, openshift, preview, remote, stable.
 
   istio:

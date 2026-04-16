@@ -5,5 +5,5 @@ description: >
   base setup, including support for sidecar and ambient modes, and monitoring integration.
 
 type: application
-version: 0.1.0
+version: 0.1.1
 appVersion: "3.0.0" # The version of the OpenShift Service Mesh operator this chart is intended to be deployed upon
