@@ -25,7 +25,7 @@ Helm chart for deploying a fully functional Red Hat OpenShift Service Mesh 3.0 b
 | servicemesh.ossmc.spec.version | string | `"default"` |  |
 | servicemesh.peerauthentications | list | `[]` |  |
 | servicemesh.profile | string | `""` |  |
-| servicemesh.version | string | `"v1.24.3"` |  |
+| servicemesh.version | string | `nil` |  |
 | servicemesh.ztunnel.enabled | bool | `false` |  |
 | servicemesh.ztunnel.name | string | `"default"` |  |
 | servicemesh.ztunnel.values | object | `{}` |  |

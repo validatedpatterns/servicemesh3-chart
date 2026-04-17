@@ -3,7 +3,9 @@ kind: IstioCNI
 metadata:
   name: {{ .Values.servicemesh.istiocni.name | quote }}
 spec:
+  {{- if .Values.servicemesh.version }}
   version: {{ .Values.servicemesh.version | quote }}
+  {{- end }}
   namespace: {{ .Values.servicemesh.istiocni.namespace | default .Release.Namespace | quote }}
   {{- if .Values.servicemesh.profile }}
   profile: {{ .Values.servicemesh.profile }}
